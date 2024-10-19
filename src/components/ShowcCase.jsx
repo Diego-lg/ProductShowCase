@@ -170,27 +170,8 @@ const ShowCase = () => {
       <EnhancedTshirtShowcase>
         <TshirtShowcase />
       </EnhancedTshirtShowcase>
-      <ProductDetails>
-        <ProductName>{product.name}</ProductName>
-        <ProductPrice>Price: ${product.price}</ProductPrice>
-        <ProductDescription>{product.description}</ProductDescription>
-        <SizeSelector>
-          <label>Size: </label>
-          <SizeBubbleContainer>
-            {product.sizes.map((size, index) => (
-              <SizeBubble
-                key={index}
-                className={selectedSize === size ? "selected" : ""}
-                onClick={() => setSelectedSize(size)}
-              >
-                {size}
-              </SizeBubble>
-            ))}
-          </SizeBubbleContainer>
-        </SizeSelector>
-        <AddToCartButton>Add to Cart</AddToCartButton>
-        <ProductImage src={product.image} alt={product.name} />
-      </ProductDetails>
+
+
     </ShowcaseContainer>
   );
 };
